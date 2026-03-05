@@ -259,6 +259,7 @@
   color: #a4d2dd;
   font-weight: 800;
 }
+
 /* ------------------------------------------- */
 /* SECCION SOBRE NOSOTROS */
 
@@ -282,7 +283,7 @@
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.25);
   border: 1px solid rgba(255, 255, 255, 0.35);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06) ;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
 }
 
 /* FILA SUPERIOR */
@@ -323,7 +324,7 @@
 .team__name {
   font-size: 18px;
   font-weight: 600;
-  text-align:center;
+  text-align: center;
 }
 
 /* BIO */
@@ -332,10 +333,11 @@
   font-weight: 400;
   text-align: center;
 }
+
 /* ------------------------------------------- */
 /* FOOTER */
 
-.footer{
+.footer {
   background: #c5e4f7;
   padding: 18px 10px 20px;
 }
@@ -349,20 +351,20 @@
 }
 
 /* INFO */
-.footer__info{
+.footer__info {
   justify-self: start;
   display: grid;
   gap: 2px;
   text-align: left;
 }
 
-.footer__line{
+.footer__line {
   margin: 0;
   font-size: 13px;
 }
 
 /* REDES */
-.footer__social{
+.footer__social {
   justify-self: center;
   display: flex;
   align-items: center;
@@ -370,7 +372,7 @@
 }
 
 /* ICONOS DE REDES */
-.footer__icon{
+.footer__icon {
   width: 46px;
   height: 46px;
   display: inline-flex;
@@ -381,7 +383,7 @@
   transition: transform .2s ease, box-shadow .2s ease;
 }
 
-.footer__icon img{
+.footer__icon img {
   width: 90px;
   height: 90px;
   object-fit: contain;
@@ -389,27 +391,276 @@
   opacity: 0.9;
 }
 
-.footer__icon:hover{
+.footer__icon:hover {
   transform: translateY(-2px);
 }
 
 /* LOGO SERENDIPIA HOME EN FOOTER */
-.footer__home{
+.footer__home {
   justify-self: end;
   margin-right: 15px;
   display: inline-flex;
   transition: transform .2s ease;
 }
 
-.footer__home img{
+.footer__home img {
   width: 70px;
   height: 70px;
   object-fit: contain;
   display: block;
 }
 
-.footer__home:hover{
+.footer__home:hover {
   transform: translateY(-2px);
 }
 
 /* ------------------------------------------- */
+/* PAGINA CATALOGO */
+
+/* ENCABEZADO DEL CATÁLOGO (H1 + P) */
+.catalogoHead {
+  margin: 6px auto 18px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.catalogoHead__title {
+  margin: 0 0 6px;
+  color: #bd9ff5;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 26px;
+  padding-left: 10px;
+}
+
+.catalogoHead__subtitle {
+  margin: 0;
+  color: #2b2b2b;
+  opacity: 0.85;
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+/* <!-- FILTROS DE BOOSTRAP / ACORDIÓN --> */
+
+/* CONTENEDOR CARD */
+.catalogoFilters {
+  margin: 0 auto 18px;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+/* AJUSTES A BOOSTRAP */
+.catalogoFilters .accordion-item {
+  border: 0;
+  background: transparent;
+}
+
+.catalogoFilters .accordion-button {
+  background: rgba(255, 255, 255, 0.45);
+  color: #2b2b2b;
+  font-weight: 750;
+  letter-spacing: 0.3px;
+}
+
+.catalogoFilters .accordion-button:not(.collapsed) {
+  background: rgba(255, 255, 255, 0.55);
+  color: #bb9df4;
+}
+
+.catalogoFilters .accordion-button:focus {
+  box-shadow: none;
+  outline: 2px solid rgba(187, 157, 244, 0.35);
+  outline-offset: 2px;
+}
+
+.catalogoFilters .accordion-body {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* ------------------------------------------- */
+/* GRID DE PRODUCTOS / CATÁLOGO */
+
+.catalogoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  row-gap: 24px;
+  align-items: stretch;
+}
+
+/* CONTENEDOR CARD PRODUCTOS */
+.catalogoItem {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 18px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.catalogoItem:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* CAJA IMAGEN */
+.catalogoItem__imgBox {
+  background: #ffffff;
+  border: 1px solid rgba(155, 109, 109, 0.08);
+  border-radius: 6px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 300px;
+}
+
+.catalogoItem__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover
+}
+
+/* CONTENIDO */
+.catalogoItem__content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+}
+
+/* TITULOS DE PRODUCTOS */
+.catalogoItem__title {
+  margin: 0;
+  color: #2b2b2b;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 650;
+  letter-spacing: 0.4px;
+}
+
+/* TEXTO DESCRIPCION DE PRODUCTOS */
+.catalogoItem__text {
+  margin: 0;
+  color: #2b2b2b;
+  opacity: 0.85;
+  line-height: 1.4;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* BOTÓN "VER PRODUCTO" */
+.catalogoItem__bottom {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.catalogoItem__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 160px;
+  height: 38px;
+  padding: 0 14px;
+  text-decoration: none;
+  border-radius: 6px;
+  background: #a4d2dd;
+  color: #ffffff;
+  font-weight: 750;
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  transition: transform .2s ease, filter .2s ease;
+}
+
+.catalogoItem__btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(0.98);
+}
+
+/* PRECIO PRODUCTOS */
+.catalogoItem__price {
+  font-weight: 800;
+  color: #bb9df4;
+  font-size: 20px;
+}
+
+/* ------------------------------------------- */
+/* PRODUCTOS DESTACADO 2026 */
+
+.destacados {
+  margin: 24px auto 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* TITULO DE SECCION DESTACADOS */
+.destacados__title {
+  padding-left: 10px;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #bb9df4;
+  text-transform: uppercase;
+}
+
+/* TEXTO EN DESTACADOS */
+.destacados__text {
+  padding-left: 10px;
+  color: #2b2b2b;
+  opacity: 0.85;
+  font-size: 16px;
+}
+
+/* GRID PARA VIDEOS */
+.destacados__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 60px;
+  row-gap: 20px;
+  align-items: stretch;
+  justify-items: center;
+}
+
+/* CARD DE VIDEOS */
+.destacados__card {
+  max-width: 300px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.destacados__card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.10);
+}
+
+/* VIDEOS*/
+.destacados__video {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: contain;
+  display: block;
+}
+

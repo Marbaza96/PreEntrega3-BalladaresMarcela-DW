@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serendipia | Catálogo</title>
+
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- BOOSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <!-- LOGO + MENU DE NAVEGACIÓN -->
+        <div class="header__bar">
+            <a class="header__brand" href="../index.html">
+                <img class="header__logo" src="../img/logoserendipiacolor.png" alt="Logo de Serendipia a color">
+            </a>
+
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a class="nav__link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link nav__link--active" href="./catalogo.html">Catálogo</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link" href="./contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- BANNER -->
+        <section class="banner">
+            <img src="../img/bannerserendipia.png" alt="Imagen de encabezado de Serendipia">
+        </section>
+
+    </header>
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- ENCABEZADO DE PÁGINA -->
+        <section class="catalogoHead" aria-label="Encabezado de catálogo">
+            <h1 class="catalogoHead__title">Catálogo</h1>
+            <p class="catalogoHead__subtitle">Explora todos nuestros productos y pide el tuyo personalizado.</p>
+        </section>
+
+        <!-- FILTROS DE BOOSTRAP / ACORDIÓN -->
+
+        <section class="catalogoFilters" aria-label="Filtros del catálogo">
+            <div class="accordion catalogoFilters__accordion" id="filtrosCatalogo">
+
+                <!-- ITEM 1 -->
+                <div class="accordion-item catalogoFilters__item">
+                    <h2 class="accordion-header catalogoFilters__header">
+                        <button class="accordion-button catalogoFilters__button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#filtroCategoria" aria-expanded="true" aria-controls="filtroCategoria">
+                            Filtrar por categoría
+                        </button>
+                    </h2>
+
+                    <div id="filtroCategoria" class="accordion-collapse collapse show"
+                        data-bs-parent="#filtrosCatalogo">
+                        <div class="accordion-body catalogoFilters__body">
+
+                            <!-- BADGES BOOTSTRAP -->
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge text-bg-light">Todos</span>
+                                <span class="badge text-bg-light">Papelería</span>
+                                <span class="badge text-bg-light">Regalos</span>
+                                <span class="badge text-bg-light">Aula</span>
+                                <span class="badge text-bg-light">Decoración</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- GRID DE PRODUCTOS / CATÁLOGO -->
+
+        <section class="catalogoGrid" aria-label="Listado de productos">
+
+            <!-- CARD 1 -->
+            <article class="catalogoItem" aria-label="Producto 1">
+                <div class="catalogoItem__imgBox">
+                    <img class="catalogoItem__img" src="../img/productocarteles.png" alt="Carteles reglas del salón" />
+                </div>
+
+                <div class="catalogoItem__content">
+                    <h3 class="catalogoItem__title">Carteles del salón</h3>
+                    <p class="catalogoItem__text">
+                        Carteles personalizados para el aula, con diseño y estilo Serendipia.
+                    </p>
+
+                    <div class="catalogoItem__bottom">
+                        <a class="catalogoItem__btn" href="#" aria-label="Ver producto Carteles del salón">Ver
+                            producto</a>
+                        <span class="catalogoItem__price">$ 500 UYU</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- CARD 2 -->
+            <article class="catalogoItem" aria-label="Producto 2">
+                <div class="catalogoItem__imgBox">
+                    <img class="catalogoItem__img" src="../img/productocuadernos.png" alt="Cuadernos de la amistad" />
+                </div>
+
+                <div class="catalogoItem__content">
+                    <h3 class="catalogoItem__title">Cuadernos</h3>
+                    <p class="catalogoItem__text">
+                        Cuadernos personalizados con tapa dura y estética pastel.
+                    </p>
+
+                    <div class="catalogoItem__bottom">
+                        <a class="catalogoItem__btn" href="#" aria-label="Ver producto Cuadernos">Ver producto</a>
+                        <span class="catalogoItem__price">$ 500 UYU</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- CARD 3 -->
+            <article class="catalogoItem" aria-label="Producto 3">
+                <div class="catalogoItem__imgBox">
+                    <img class="catalogoItem__img" src="../img/productopapeleria.png" alt="Papelería personalizada" />
+                </div>
+
+                <div class="catalogoItem__content">
+                    <h3 class="catalogoItem__title">Papelería</h3>
+                    <p class="catalogoItem__text">
+                        Sets de papelería para organizarte con amor y diseño.
+                    </p>
+
+                    <div class="catalogoItem__bottom">
+                        <a class="catalogoItem__btn" href="#" aria-label="Ver producto Papelería">Ver producto</a>
+                        <span class="catalogoItem__price">$ 500 UYU</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- CARD 4 -->
+            <article class="catalogoItem" aria-label="Producto 4">
+                <div class="catalogoItem__imgBox">
+                    <img class="catalogoItem__img" src="../img/productoalcancia.png" alt="Alcancías personalizadas" />
+                </div>
+
+                <div class="catalogoItem__content">
+                    <h3 class="catalogoItem__title">Alcancías</h3>
+                    <p class="catalogoItem__text">
+                        Alcancías personalizadas, ideales para regalos y peques.
+                    </p>
+
+                    <div class="catalogoItem__bottom">
+                        <a class="catalogoItem__btn" href="#" aria-label="Ver producto Alcancías">Ver producto</a>
+                        <span class="catalogoItem__price">$ 500 UYU</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- CARD 5 -->
+            <article class="catalogoItem" aria-label="Producto 5">
+                <div class="catalogoItem__imgBox">
+                    <img class="catalogoItem__img" src="../img/productodomino.png" alt="Dominó de fracciones" />
+                </div>
+
+                <div class="catalogoItem__content">
+                    <h3 class="catalogoItem__title">Dominó educativo</h3>
+                    <p class="catalogoItem__text">
+                        Material didáctico para aprender jugando, con diseño cuidado.
+                    </p>
+
+                    <div class="catalogoItem__bottom">
+                        <a class="catalogoItem__btn" href="#" aria-label="Ver producto Dominó educativo">Ver
+                            producto</a>
+                        <span class="catalogoItem__price">$ 500 UYU</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- CARD 6 -->
+            <article class="catalogoItem" aria-label="Producto 6">
+                <div class="catalogoItem__imgBox">
+                    <img class="catalogoItem__img" src="../img/productoplanner.png"
+                        alt="Planner semanal personalizado" />
+                </div>
+
+                <div class="catalogoItem__content">
+                    <h3 class="catalogoItem__title">Planner semanal</h3>
+                    <p class="catalogoItem__text">
+                        Planner semanal personalizado para organizarte con estética Serendipia.
+                    </p>
+
+                    <div class="catalogoItem__bottom">
+                        <a class="catalogoItem__btn" href="#" aria-label="Ver producto Planner semanal">Ver producto</a>
+                        <span class="catalogoItem__price">$ 500 UYU</span>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <!-- SECCION PRODUCTOS DESTACADOS -->
+
+        <section class="destacados" aria-label="Productos destacados 2026">
+            <h2 class="destacados__title">Productos destacados 2026</h2>
+            <p class="destacados__text">Descubre los productos más requeridos este 2026. Registramos nuestros procesos y producciones. Aptos para el aula como para casa.</p>
+
+            <div class="destacados__grid">
+
+                <!-- VIDEO 1 -->
+                <article class="destacados__card" aria-label="Video destacado - Carteles Reglas del salón">
+                    <video class="destacados__video" controls preload="metadata" controls poster="../img/miniatura-reglas.png">
+                        <source src="../video/video-carteles.mp4" type="video/mp4">
+                        Tu navegador no soporta video HTML5.
+                    </video>
+                </article>
+
+                <!-- VIDEO 2 -->
+                <article class="destacados__card" aria-label="Video destacado - Dominó de fracciones">
+                    <video class="destacados__video" controls preload="metadata" controls poster="../img/miniatura-domino.png">
+                        <source src="../video/video-domino.mp4" type="video/mp4">
+                        Tu navegador no soporta video HTML5.
+                    </video>
+                </article>
+
+                <!-- VIDEO 3 -->
+                <article class="destacados__card" aria-label="Video destacado - Etiquetas personalizadas">
+                    <video class="destacados__video" controls preload="metadata" controls poster="../img/miniatura-etiquetas.png">
+                        <source src="../video/video-etiquetas.mp4" type="video/mp4">
+                        Tu navegador no soporta video HTML5.
+                    </video>
+                </article>
+
+                <!-- VIDEO 4 -->
+                <article class="destacados__card" aria-label="Video destacado - Carteles numéricos">
+                    <video class="destacados__video" controls preload="metadata" controls poster="../img/miniatura-numeros.png">
+                        <source src="../video/video-numeros.mp4" type="video/mp4">
+                        Tu navegador no soporta video HTML5.
+                    </video>
+                </article>
+
+                <!-- VIDEO 5 -->
+                <article class="destacados__card" aria-label="Video destacado - Recurso gratuito">
+                    <video class="destacados__video" controls preload="metadata" controls poster="../img/miniatura-actividad.png">
+                        <source src="../video/video-actividad.mp4" type="video/mp4">
+                        Tu navegador no soporta video HTML5.
+                    </video>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+        <div class="footer__box">
+
+            <!-- INFO -->
+            <div class="footer__info">
+                <p class="footer__line">Celular de contacto <strong>(+598) 123 456</strong></p>
+                <p class="footer__line"><strong>Uruguay | Dirección Calle Sarasa N° 123</strong></p>
+                <p class="footer__line">Horario de atención: <strong>Lunes a Viernes | 09:00 h a 18:00 h</strong></p>
+            </div>
+
+            <!-- LOGOS REDES (CENTRO) -->
+            <div class="footer__social" aria-label="Redes sociales">
+                <!-- INSTAGRAM -->
+                <a class="footer__icon" href="https://www.instagram.com/serendipia_art.uy/?hl=es-la" target="_blank"
+                    aria-label="Instagram">
+                    <img src="../img/logoredes-ig.png" alt="Instagram">
+                </a>
+                <!-- FACEBOOK -->
+                <a class="footer__icon" href="https://www.facebook.com/profile.php?id=61572927813708&locale=es_LA"
+                    target="_blank" aria-label="Facebook">
+                    <img src="../img/logoredes-fb.png" alt="Facebook">
+                </a>
+                <!--EMAIL -->
+                <a class="footer__icon"
+                    href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&dsh=S-534827807%3A1772737593912787&emr=1&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&ifkv=ASfE1-oh9R4bppo8j1NmPG-FbDMNKpvaKEikH_8S3-Yq4ZZQvi3bvS82tOVkE8B-ut_WA383IE6o&osid=1&passive=1209600&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+                    target="_blank" aria-label="Email">
+                    <img src="../img/logoredes-mail.png" alt="Email">
+                </a>
+            </div>
+
+            <!-- LOGO AL HOME -->
+            <a class="footer__home" href="../index.html" aria-label="Volver al inicio">
+                <img src="../img/logoserendipiacolor.png" alt="Logo de Serendipia">
+            </a>
+
+        </div>
+    </footer>
+
+    <!-- BOOSTRAP SCRIPT JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
