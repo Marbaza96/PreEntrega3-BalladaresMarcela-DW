@@ -1,0 +1,250 @@
+// ESTILOS DEL HOME
+
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// CONTENEDOR MAIN
+.main {
+    background: $color-rosa-bg;
+    padding: 24px;
+}
+
+// GRID PRINCIPAL HOME
+.homeGrid {
+    @include grid(2fr 1fr, 24px);
+    grid-template-areas:
+        "catalogo presupuesto"
+        "sobre sobre";
+}
+
+// CARDS GENERALES DEL HOME
+.homeGrid .card {
+    display: flex;
+    flex-direction: column;
+    @include card-glass;
+    padding: 20px;
+    transition: transform $transition-fast, box-shadow $transition-fast;
+}
+
+.homeGrid .card:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-hover;
+}
+
+// AREAS DEL GRID
+.card--catalogo {
+    grid-area: catalogo;
+    position: relative;
+}
+
+.card--presupuesto {
+    grid-area: presupuesto;
+}
+
+.card--sobre {
+    grid-area: sobre;
+}
+
+// TITULOS GENERALES
+.card__title {
+    margin: 0;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    min-height: 28px;
+    @include card-title;
+}
+
+.card__title--center {
+    text-align: center;
+    padding-left: 0;
+}
+
+// BOTON VER CATALOGO
+#btnCatalogo {
+    position: absolute;
+    top: 16px;
+    right: 30px;
+    width: fit-content;
+    height: auto;
+    padding: 7px 16px;
+    @include font-main-medium;
+    font-size: 14px;
+}
+
+// SECCION CATALOGO HOME
+.card--catalogo .carousel {
+    padding: 6px 8px 18px;
+}
+
+.catalogoCard {
+    @include flex-center;
+    background: $color-blanco;
+    border: 1px solid rgba(155, 109, 109, 0.08);
+    border-radius: $radius-sm;
+    aspect-ratio: 1 / 1;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.catalogoCard__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.card--catalogo .carousel-control-prev-icon,
+.card--catalogo .carousel-control-next-icon {
+    filter: invert(1) grayscale(1);
+    opacity: 0.85;
+}
+
+// SECCION PRESUPUESTO
+.card--presupuesto {
+    position: relative;
+    padding-top: 18px;
+    padding-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+//BEFORE USADO PARA LA IMAGEN DEBAJO DEL TEXTO: Z-INDEX:0
+.card--presupuesto::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../img/planes-presupuesto.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120%;
+    opacity: 0.2;
+    z-index: 0;
+    margin-right: 80px;
+    pointer-events: none;
+}
+
+//TODOS LOS HIJOS DIRECTOS DE CARD.PRESUPUESTO: Z-INDEX:1
+.card--presupuesto>* {
+    position: relative;
+    z-index: 1;
+}
+
+.card--presupuesto .card__title {
+    max-width: 300px;
+}
+
+.presupuesto__text {
+    @include font-main-light;
+    text-align: center;
+    margin: 0;
+    font-size: 18px;
+    color: $color-negro-tx;
+    max-width: 300px;
+}
+
+// BOTON AQUI / BOTONES GENERALES HOME
+.btnCard {
+    @include button-base;
+    width: 300px;
+    max-width: 100%;
+    height: 44px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+
+// CHECKLIST DE BENEFICIOS EN PRESUPUESTO/HOME
+.presupuesto__beneficios {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    max-width: 300px;
+
+    li {
+        @include font-main-light;
+        margin: 10px 0;
+        font-size: 16px;
+        color: $color-negro-tx;
+    }
+
+    li::before {
+        content: "✓ ";
+        color: $color-celeste;
+        font-weight: 800;
+    }
+}
+
+// SECCION SOBRE NOSOTROS
+
+//TEXTO SOBRE NOSOTROS
+.sobre__text {
+    @include font-main-light;
+    margin: 0 0 18px 10px;
+    color: $color-negro-tx;
+    font-size: 15px;
+}
+
+// TEAM LAYOUT
+.team {
+    @include grid(repeat(3, 1fr), 26px);
+    margin-top: 12px;
+}
+
+// TEAM CARDS
+.team__member {
+    display: grid;
+    gap: 10px;
+    padding: 12px;
+    border-radius: $radius-sm;
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: $shadow-card;
+}
+
+.team__top {
+    @include grid(250px 1fr, 16px, center);
+}
+
+.team__photo {
+    width: 250px;
+    aspect-ratio: 1 / 1;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: $radius-md;
+    overflow: hidden;
+}
+
+// FOTO DEL MEMBER EN TEAM
+.team__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(20%);
+}
+
+//INFO DEL MEMBER EN TEAM
+.team__info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.team__name {
+    @include font-main-medium;
+    font-size: 18px;
+    text-align: center;
+    color: $color-lila;
+}
+
+.team__bio {
+    @include font-main-light;
+    font-size: 14px;
+    text-align: center;
+}

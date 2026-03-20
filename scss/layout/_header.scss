@@ -1,0 +1,64 @@
+// ESTILOS DEL HEADER 
+
+@use "../utilities/variables" as *;
+
+// CONTENEDOR HEADER
+.header {
+    position: relative;
+}
+
+.header__bar {
+    position: absolute;
+    top: 22px;
+    left: 110px;
+    z-index: 10;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+// LOGO EN HEADER
+.header__logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    display: block;
+    transition: transform $transition-fast;
+}
+
+.header__logo:hover {
+    transform: translateY(-2px);
+}
+
+// MENU DE NAVEGACION - DESKTOP
+.header__menu {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+    .nav-link {
+        color: $color-lila;
+        text-transform: uppercase;
+        font-family: $font-main;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        padding: 6px 2px;
+    }
+
+    .nav-link:hover {
+        color: $color-hover-link;
+    }
+}
+
+#activeLink {
+    color: $color-celeste;
+}
+
+// BANNER ENCABEZADO
+.banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+}

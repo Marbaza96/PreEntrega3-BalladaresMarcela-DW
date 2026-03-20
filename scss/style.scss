@@ -1,0 +1,20 @@
+
+// VARIABLES Y UTILIDADES
+@use "./utilities/variables" as *;
+@use "./utilities/mixins" as *;
+
+// BASE
+@use "./base/reset";
+
+// LAYOUT
+@use "./layout/header";
+@use "./layout/footer";
+
+// PAGES
+@use "./pages/home";
+@use "./pages/catalogo";
+@use "./pages/contacto";
+
+// MEDIA QUERIES
+@use "./layout/mq-tablet";
+@use "./layout/mq-mobile";

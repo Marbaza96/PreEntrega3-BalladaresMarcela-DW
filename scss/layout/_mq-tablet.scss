@@ -1,0 +1,263 @@
+
+
+// MEDIA QUERIES - TABLET
+
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    // MAIN
+    .main {
+        padding: 18px;
+    }
+
+    // HEADER
+    .header__bar {
+        position: absolute;
+        top: 14px;
+        right: 18px;
+        left: auto;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .header__logo {
+        width: 44px;
+        height: 44px;
+    }
+
+    .header__toggler {
+        padding: 6px 10px;
+        background: rgba(255, 255, 255, 0.88);
+        border: 0;
+        border-radius: $radius-sm;
+    }
+
+    .header__toggler:focus {
+        box-shadow: none;
+        outline: 2px solid rgba(187, 157, 244, 0.35);
+        outline-offset: 2px;
+    }
+
+    .header__toggler .navbar-toggler-icon {
+        filter: grayscale(1) brightness(0.35);
+    }
+
+    .header__collapse {
+        position: absolute;
+        top: 100%;
+        margin-top: 8px;
+        right: 0;
+        min-width: 220px;
+        padding: 12px 16px;
+        background: rgba(255, 255, 255, 0.96);
+        border-radius: $radius-md;
+        box-shadow: $shadow-soft;
+    }
+
+    .header__menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0;
+    }
+
+    .header__menu .nav-link {
+        font-size: 14px;
+        letter-spacing: 0.12em;
+        text-align: right;
+        padding: 8px 0;
+    }
+
+    // HOME
+    .homeGrid {
+        @include grid(1.6fr 1fr, 18px);
+        grid-template-areas:
+            "catalogo presupuesto"
+            "sobre sobre";
+    }
+
+    .homeGrid .card {
+        padding: 18px;
+    }
+
+    .card__title {
+        font-size: 18px;
+        padding-left: 6px;
+    }
+
+    #btnCatalogo {
+        top: 14px;
+        right: 18px;
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    // CAROUSEL
+    .card--catalogo .carousel {
+        padding: 8px 6px 18px;
+    }
+
+    .card--catalogo .carousel-item .col-md-4 {
+        display: none;
+    }
+
+    .card--catalogo .carousel-item .col-md-4:first-child {
+        display: block;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .card--catalogo .carousel-item .row {
+        justify-content: center;
+    }
+
+    .catalogoCard {
+        width: 100%;
+        padding: 14px;
+    }
+
+    // PRESUPUESTO
+    .presupuesto__text {
+        font-size: 16px;
+    }
+
+    .presupuesto__beneficios li {
+        font-size: 15px;
+    }
+
+    .btnCard {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    // SOBRE NOSOTROS
+    .sobre__text {
+        margin: 0 0 16px 6px;
+        font-size: 14px;
+    }
+
+    .team {
+        @include grid(1fr 1fr, 18px);
+    }
+
+    .team__member {
+        padding: 14px;
+    }
+
+    .team__top {
+        @include grid(1fr, 12px);
+        justify-items: center;
+    }
+
+    .team__photo {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    .team__name {
+        font-size: 17px;
+    }
+
+    .team__bio {
+        font-size: 14px;
+    }
+
+    // FOOTER
+    .footer__box {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr auto;
+        align-items: center;
+    }
+
+    .footer__info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4px 14px;
+        text-align: left;
+    }
+
+    .footer__line {
+        font-size: 10px;
+        line-height: 1.25;
+        white-space: nowrap;
+    }
+
+    .footer__line:last-child {
+        grid-column: 1 / 3;
+    }
+
+    .footer__social {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .footer__icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    .footer__icon img {
+        width: 56px;
+        height: 56px;
+    }
+
+    .footer__home img {
+        width: 42px;
+        height: 42px;
+    }
+
+    // PAGINA CATALOGO
+    .catalogoHead,
+    .catalogoFilters,
+    .destacados,
+    .contactoHead,
+    .contactoForm,
+    .ubicacion {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .catalogoGrid {
+        @include grid(1fr, 18px);
+    }
+
+    .catalogoItem {
+        @include grid(240px 1fr, 16px);
+        padding: 16px;
+    }
+
+    .catalogoItem__title {
+        font-size: 17px;
+    }
+
+    .catalogoItem__text {
+        font-size: 15px;
+    }
+
+    .catalogoItem__price {
+        font-size: 18px;
+        white-space: nowrap;
+    }
+
+    .destacados__grid {
+        @include grid(repeat(2, 1fr), 24px);
+    }
+
+    .destacados__card {
+        max-width: 260px;
+    }
+
+    // CONTACTO
+    .contactoLayout {
+        @include grid(1fr, 18px);
+    }
+
+    .ubicacion__mapBox {
+        min-height: 320px;
+    }
+}

@@ -1,0 +1,75 @@
+@use "./variables" as *;
+
+// FLEX CENTRADO
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// GRID BASE
+@mixin grid($columns, $gap: 0, $align: stretch) {
+    display: grid;
+    grid-template-columns: $columns;
+    gap: $gap;
+    align-items: $align;
+}
+
+// CARD GLASS
+@mixin card-glass {
+    background: $glass-bg;
+    backdrop-filter: blur(8px);
+    border: 1px solid $glass-border;
+    border-radius: $radius-sm;
+    box-shadow: $shadow-soft;
+}
+
+// TITULOS DE SECCION EN C/PAGINA
+@mixin section-title($size, $weight: 700, $color: $color-lila) {
+    font-family: $font-main;
+    font-size: $size;
+    font-weight: $weight;
+    letter-spacing: 0.5px;
+    color: $color;
+    text-transform: uppercase;
+}
+
+// TITULO DE CARD
+@mixin card-title {
+    font-family: $font-main;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: $color-lila;
+    text-transform: uppercase;
+}
+
+// BOTONES
+@mixin button-base($bg-color: $color-celeste, $text-color: $color-blanco) {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: $bg-color;
+    color: $text-color;
+    text-decoration: none;
+    border-radius: $radius-sm;
+    font-family: $font-main;
+    font-weight: 700;
+    transition: transform $transition-fast, filter $transition-fast;
+}
+
+// TIPOGRAFIAS
+@mixin font-main-bold {
+    font-family: $font-main;
+    font-weight: 800;
+}
+
+@mixin font-main-medium {
+    font-family: $font-main;
+    font-weight: 600;
+}
+
+@mixin font-main-light {
+    font-family: $font-main;
+    font-weight: 400;
+}

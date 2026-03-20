@@ -1,0 +1,371 @@
+// MEDIA QUERIES - MOBILE
+
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+@media (max-width: 767px) {
+
+    // MAIN
+    .main {
+        padding: 14px;
+    }
+
+    // HEADER
+    .header__bar {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        left: auto;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .header__logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .header__toggler {
+        padding: 5px 8px;
+        background: rgba(255, 255, 255, 0.9);
+        border: 0;
+        border-radius: $radius-sm;
+    }
+
+    .header__toggler:focus {
+        box-shadow: none;
+        outline: 2px solid rgba(187, 157, 244, 0.35);
+        outline-offset: 2px;
+    }
+
+    .header__toggler .navbar-toggler-icon {
+        filter: grayscale(1) brightness(0.35);
+    }
+
+    .header__collapse {
+        position: absolute;
+        top: 100%;
+        margin-top: 8px;
+        right: 0;
+        min-width: 190px;
+        padding: 10px 14px;
+        background: rgba(255, 255, 255, 0.96);
+        border-radius: $radius-md;
+        box-shadow: $shadow-soft;
+    }
+
+    .header__menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0;
+    }
+
+    .header__menu .nav-link {
+        font-size: 13px;
+        letter-spacing: 0.08em;
+        text-align: right;
+        padding: 8px 0;
+    }
+
+    // HOME
+    .homeGrid {
+        @include grid(1fr, 14px);
+        grid-template-areas:
+            "catalogo"
+            "presupuesto"
+            "sobre";
+    }
+
+    .homeGrid .card {
+        padding: 16px;
+    }
+
+    .card__title {
+        font-size: 17px;
+        padding-left: 0;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+    .card__title--center {
+        text-align: center;
+    }
+
+    #btnCatalogo {
+        position: static;
+        width: 100%;
+        max-width: 100%;
+        height: 42px;
+        margin: 10px 0 0;
+        padding: 0;
+    }
+
+    .card--catalogo .carousel {
+        padding: 6px 0 10px;
+    }
+
+    .card--catalogo .carousel-item .col-12 {
+        display: none;
+    }
+
+    .card--catalogo .carousel-item .col-12:first-child {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+
+    .catalogoCard {
+        aspect-ratio: 1 / 1;
+        padding: 8px;
+    }
+
+    .card--presupuesto {
+        padding-top: 16px;
+        padding-bottom: 20px;
+        gap: 14px;
+    }
+
+    .card--presupuesto::before {
+        background-size: 140%;
+        margin-right: 0;
+        opacity: 0.14;
+    }
+
+    .presupuesto__text {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .presupuesto__beneficios li {
+        font-size: 14px;
+        margin: 8px 0;
+    }
+
+    .btnCard {
+        width: 100%;
+        height: 42px;
+        margin-bottom: 0;
+        font-size: 17px;
+    }
+
+    .sobre__text {
+        margin: 0 0 14px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .team {
+        @include grid(1fr, 14px);
+        margin-top: 10px;
+    }
+
+    .team__member {
+        padding: 14px;
+    }
+
+    .team__top {
+        @include grid(1fr, 12px);
+        justify-items: center;
+    }
+
+    .team__photo {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    .team__info {
+        gap: 4px;
+    }
+
+    .team__name {
+        font-size: 16px;
+    }
+
+    .team__bio {
+        font-size: 13px;
+    }
+
+    // FOOTER
+    .footer {
+        padding: 14px 12px 18px;
+    }
+
+    .footer__box {
+        margin-left: 0;
+        width: 100%;
+        @include grid(1fr, 10px, center);
+        grid-template-areas:
+            "social"
+            "info";
+        justify-items: center;
+    }
+
+    .footer__social {
+        grid-area: social;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .footer__icon img {
+        width: 60px;
+    }
+
+    .footer__info {
+        grid-area: info;
+        justify-self: center;
+        text-align: center;
+        gap: 4px;
+    }
+
+    .footer__line {
+        margin: 0;
+        font-size: 10px;
+        line-height: 1.3;
+    }
+
+    .footer__home {
+        display: none;
+    }
+
+    // CATALOGO
+    .catalogoHead {
+        padding: 18px 16px;
+    }
+
+    .catalogoHead__title {
+        font-size: 22px;
+        padding-left: 0;
+    }
+
+    .catalogoHead__subtitle {
+        font-size: 14px;
+        padding-left: 0;
+    }
+
+    .catalogoFilters .accordion-button {
+        margin-left: 0;
+        font-size: 14px;
+    }
+
+    .catalogoGrid {
+        @include grid(1fr, 14px);
+    }
+
+    .catalogoItem {
+        @include grid(1fr, 14px);
+        padding: 14px;
+    }
+
+    .catalogoItem__imgBox {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .catalogoItem__img {
+        object-fit: cover;
+    }
+
+    .catalogoItem__title {
+        margin-top: 0;
+        font-size: 16px;
+    }
+
+    .catalogoItem__text {
+        font-size: 14px;
+        line-height: 1.45;
+    }
+
+    .catalogoItem__bottom {
+        gap: 10px;
+    }
+
+    .catalogoItem__btn {
+        width: 55%;
+        height: 38px;
+        font-size: 12px;
+    }
+
+    .catalogoItem__price {
+        padding-right: 5px;
+        font-size: 18px;
+    }
+
+    .destacados {
+        padding: 16px;
+    }
+
+    .destacados__title {
+        padding-left: 0;
+        font-size: 17px;
+    }
+
+    .destacados__text {
+        padding-left: 0;
+        font-size: 13px;
+        line-height: 1.45;
+    }
+
+    .destacados__grid {
+        @include grid(1fr, 18px);
+    }
+
+    .destacados__card {
+        max-width: 240px;
+    }
+
+    // CONTACTO
+    .contactoHead {
+        padding: 18px 16px;
+    }
+
+    .contactoHead__title {
+        font-size: 22px;
+        padding-left: 0;
+    }
+
+    .contactoHead__subtitle {
+        font-size: 14px;
+        padding-left: 0;
+    }
+
+    .contactoLayout {
+        @include grid(1fr, 14px);
+    }
+
+    .contactoForm,
+    .ubicacion {
+        padding: 16px;
+    }
+
+    .contactoForm__title,
+    .ubicacion__title {
+        padding-left: 0;
+        font-size: 15px;
+    }
+
+    .contactoForm__box {
+        padding: 14px;
+    }
+
+    .contactoForm__label {
+        font-size: 13px;
+    }
+
+    .ubicacion__mapBox {
+        min-height: 280px;
+    }
+
+    .contactoForm .d-sm-flex {
+        flex-direction: column;
+    }
+
+    .contactoForm__btn {
+        width: 100%;
+    }
+}

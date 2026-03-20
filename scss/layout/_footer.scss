@@ -1,0 +1,83 @@
+// ESTILOS DEL FOOTER
+
+@use "../utilities/variables" as *;
+
+// CONTENEDOR FOOTER
+.footer {
+    background: $color-celeste;
+    padding: 18px 10px 20px;
+}
+
+.footer__box {
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+// INFORMACION DE CONTACTO
+.footer__info {
+    justify-self: start;
+    display: grid;
+    gap: 2px;
+    text-align: left;
+    font-family: $font-main;
+    color: $color-gris-tx;
+}
+
+.footer__line {
+    margin: 0;
+    font-size: 13px;
+}
+
+// REDES SOCIALES
+.footer__social {
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+// ICONOS DE REDES
+.footer__icon {
+    width: 46px;
+    height: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $radius-md;
+    background: transparent;
+    transition: transform $transition-fast, box-shadow $transition-fast;
+
+    img {
+        width: 90px;
+        height: 90px;
+        object-fit: contain;
+        display: block;
+        opacity: 0.9;
+    }
+}
+
+.footer__icon:hover {
+    transform: translateY(-2px);
+}
+
+// LOGO SERENDIPIA EN FOOTER
+.footer__home {
+    justify-self: end;
+    margin-right: 15px;
+    display: inline-flex;
+    transition: transform $transition-fast;
+
+    img {
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+        display: block;
+    }
+}
+
+.footer__home:hover {
+    transform: translateY(-2px);
+}
