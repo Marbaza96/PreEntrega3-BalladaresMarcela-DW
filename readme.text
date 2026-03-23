@@ -8,3 +8,4 @@ más páginas correspondientes a cada producto. No fueron incluidos aún para no
 Los usé como recurso para generar un diferencial con las clases de Boostrap (y en alguna ocasión también
 como solución al "before") ya que estas sobreescribían las clases creadas por mi.
 
+3. En el archivo mixins.scss se utilizo "&" para agregar psudoclases tipo hover y active, ya que varios botones utilizan este mixin y así ahorra código en pages. 

@@ -159,7 +159,7 @@
 }
 
 .homeGrid .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
 }
 
@@ -291,7 +291,20 @@
   border-radius: 6px;
   font-family: "LINE Seed JP", sans-serif;
   font-weight: 700;
-  transition: transform 0.2s ease, filter 0.2s ease;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+}
+.btnCard:hover {
+  transform: translateY(-2px);
+  filter: brightness(0.95);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+.btnCard:active {
+  transform: scale(0.96);
+  filter: brightness(0.9);
+  box-shadow: none;
+}
+.btnCard {
   width: 300px;
   max-width: 100%;
   height: 44px;
@@ -498,6 +511,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.catalogoItem:hover .catalogoItem__img {
+  transform: scale(1.05);
 }
 
 .catalogoItem__content {
@@ -543,7 +561,20 @@
   border-radius: 6px;
   font-family: "LINE Seed JP", sans-serif;
   font-weight: 700;
-  transition: transform 0.2s ease, filter 0.2s ease;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+}
+.catalogoItem__btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(0.95);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+.catalogoItem__btn:active {
+  transform: scale(0.96);
+  filter: brightness(0.9);
+  box-shadow: none;
+}
+.catalogoItem__btn {
   min-width: 160px;
   height: 38px;
   padding: 0 14px;
