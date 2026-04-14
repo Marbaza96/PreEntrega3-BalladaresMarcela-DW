@@ -1,3 +1,107 @@
+# 🧭 MAPA DE SITIO – Proyecto Serendipia
+
+Este documento describe la estructura del sitio web desarrollado para la entrega final de Desarrollo Web.
+
+---
+
+## ESTRUCTURA GENERAL DEL SITIO
+
+Compuesto por 3 páginas principales:
+
+- **Home** (`index.html`)
+- **Catálogo** (`/pages/catalogo.html`)
+- **Contacto** (`/pages/contacto.html`)
+
+Todas las páginas comparten:
+
+- Header con navegación principal
+- Footer con información general
+- Estilos unificados (CSS/SCSS)
+- Componentes de Bootstrap
+
+---
+
+## NAVEGACIÓN
+
+- El usuario puede acceder a todas las secciones desde cualquier página mediante el menú de navegación principal:
+
+    Home → Catálogo → Contacto
+
+- En Home existen accesos directos mediante botones:
+
+    “Ver catálogo” → dirige a la página de catálogo
+    “Aquí” (en sección presupuesto) → dirige a contacto
+
+- En el banner del header y en el footer se encuentra el logo de la marca que redirige al Home, aplicado en las 3 páginas.
+
+
+---
+
+## HOME (`index.html`)
+
+Contiene las siguientes secciones:
+
+- Banner principal / Menú de navegación
+- Catálogo destacado (Carousel de Bootstrap con productos)
+- Presupuesto (Llamado a la acción hacia contacto)
+- Sobre nosotros (Cards con información del equipo)
+- Footer
+---
+
+## CATÁLOGO (`catalogo.html`)
+
+Incluye:
+
+- Banner principal / Menú de navegación
+- Filtros (acordión de Bootstrap)
+- Cards de producto con imagen, descripción y acción de "Ver producto" (*ver aclaraciones)
+- Footer
+---
+
+## CONTACTO (`contacto.html`)
+
+Contiene:
+
+- Banner principal / Menú de navegación
+- Formulario de contacto ( con campos requeridos)
+- Mapa de Google Maps con ubicación de la empresa
+- Footer
+
+---
+
+## ESTILOS
+
+- Metodología **BEM** para nombrado de clases
+- Uso de **SCSS**
+- Diseño responsive (Desktop / Tablet / Mobile)
+- Paleta de colores pastel definida por la marca
+- Tipografía principal: "LINE Seed JP"
+
+---
+
+## RESPONSIVE
+
+Parámetros:
+
+- Desktop: ≥1024px
+- Tablet: 768px – 1023px
+- Mobile: ≤767px
+
+Se utilizan media queries en todo el proyecto.
+---
+
+## TECNOLOGÍAS UTILIZADAS
+
+- HTML5 (estructura semántica)
+- CSS3 / SCSS
+- Bootstrap 5
+- Google Fonts
+
+---
+
+## Proyecto realizado para Coderhouse – Desarrollo Web
+   Autora: Marcela Balladares  
+
 
 -- NOTAS, ACLARACIONES Y REFERENCIAS --
 
@@ -9,3 +113,7 @@ Los usé como recurso para generar un diferencial con las clases de Boostrap (y 
 como solución al "before") ya que estas sobreescribían las clases creadas por mi.
 
 3. En el archivo mixins.scss se utilizo "&" para agregar psudoclases tipo hover y active, ya que varios botones utilizan este mixin y así ahorra código en pages. 
+
+4. Se utilizo "TinyPNG" para optimización máxima de las imágenes en cuestión de tamaños y calidad.
+
+5. Los videos fueron subidos a YouTube y enlazados con un iframe.
